@@ -10,7 +10,7 @@ export default function SaveTheDate() {
   return (
     <section
       id="save-the-date"
-      className="relative w-full bg-beige py-24 sm:py-32 px-6 overflow-hidden"
+      className="relative w-full bg-blush pattern-diamond py-24 sm:py-32 px-6 overflow-hidden"
     >
       <FloatingHeart size={16} className="absolute top-16 left-[10%] opacity-40" delay={0} />
       <FloatingHeart size={22} className="absolute bottom-24 right-[12%] opacity-30" delay={1.2} />

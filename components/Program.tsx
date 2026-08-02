@@ -39,7 +39,7 @@ export default function Program() {
   return (
     <section
       id="program"
-      className="relative w-full bg-beige py-24 sm:py-32 px-6"
+      className="relative w-full bg-champagne pattern-arcs py-24 sm:py-32 px-6"
     >
       <SectionTitle eyebrow="The Evening" title="Program" />
 

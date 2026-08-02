@@ -10,7 +10,7 @@ export default function Location() {
   return (
     <section
       id="location"
-      className="relative w-full bg-ivory py-24 sm:py-32 px-6"
+      className="relative w-full bg-sand-mist pattern-dots py-24 sm:py-32 px-6"
     >
       <SectionTitle eyebrow="White Garden" title="Location" />
 

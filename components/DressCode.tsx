@@ -9,23 +9,10 @@ interface PaletteColor {
 }
 
 const palette: PaletteColor[] = [
-    { name: "Olive", hex: "#6E6A3C" },
-    { name: "Sage", hex: "#A7AE8C" },
-    { name: "Pistachio", hex: "#C7D2A9" },
-    { name: "Leaf", hex: "#7C8B57" },
-    { name: "Blush Sage", hex: "#CBD2BC" },
-    { name: "Mulberry", hex: "#5C2A3B" },
+    { name: "Sand", hex: "#DAC6A6" },
     { name: "Dusty Rose", hex: "#C79392" },
     { name: "Berry", hex: "#7C2F44" },
-    { name: "Pale Rose", hex: "#EAD4CF" },
-    { name: "Dusty Pink", hex: "#D9AEA6" },
-    { name: "Peony", hex: "#E8BDB5" },
-    { name: "Mauve", hex: "#A67F87" },
-    { name: "Espresso", hex: "#4A342A" },
     { name: "Chocolate", hex: "#6B4328" },
-    { name: "Deep Taupe", hex: "#7C6455" },
-    { name: "Mocha", hex: "#8D715C" },
-    { name: "Sand", hex: "#DAC6A6" },
 ];
 
 const containerVariants = {
@@ -61,7 +48,7 @@ export default function DressCode() {
     return (
         <section
             id="dress-code"
-            className="relative w-full bg-ivory py-24 sm:py-32 px-6"
+            className="relative w-full bg-blush pattern-herringbone py-24 sm:py-32 px-6"
         >
             <SectionTitle eyebrow="Garden Elegance" title="Dress Code" />
 
@@ -83,7 +70,7 @@ export default function DressCode() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.15 }}
-                className="mt-14 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-5"
+                className="mt-14 max-w-md sm:max-w-2xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"
             >
                 {palette.map(({ name, hex }) => (
                     <motion.div
@@ -91,10 +78,10 @@ export default function DressCode() {
                         variants={cardVariants}
                         whileHover={{ y: -6, scale: 1.04 }}
                         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                        className="flex flex-col items-center gap-3 rounded-2xl bg-white/70 border border-gold/15 px-3 py-5 shadow-soft transition-shadow duration-300 hover:shadow-gold cursor-default"
+                        className="flex flex-col items-center gap-4 rounded-3xl bg-white/70 border border-gold/15 px-4 py-8 shadow-soft transition-shadow duration-300 hover:shadow-gold cursor-default"
                     >
                         <span
-                            className="block w-12 h-12 sm:w-14 sm:h-14 rounded-full ring-1 ring-black/5 shadow-inner"
+                            className="block w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full ring-1 ring-gold/20 shadow-inner"
                             style={{
                                 backgroundColor: hex,
                                 boxShadow: isLight(hex)
@@ -103,8 +90,13 @@ export default function DressCode() {
                             }}
                             aria-hidden="true"
                         />
-                        <span className="font-body text-[11px] sm:text-xs text-center tracking-wide text-charcoal-soft leading-tight">
-                            {name}
+                        <span className="flex flex-col items-center gap-1">
+                            <span className="font-display text-sm sm:text-base text-center tracking-wide text-charcoal">
+                                {name}
+                            </span>
+                            <span className="font-body text-[10px] tracking-widest2 uppercase text-charcoal-faint">
+                                {hex}
+                            </span>
                         </span>
                     </motion.div>
                 ))}

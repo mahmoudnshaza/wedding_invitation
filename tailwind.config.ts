@@ -8,9 +8,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#FBF7F0",
-        cream: "#F5EEE1",
-        beige: "#EEE3CF",
+        champagne: "#FBF3E6",
+        blush: "#F8ECE7",
+        "sand-mist": "#F2E6D1",
+        sand: "#E8D3AC",
+        chocolate: "#6B4328",
         gold: {
           DEFAULT: "#C6A15B",
           light: "#E4CE9C",
@@ -30,9 +32,6 @@ const config: Config = {
       },
       letterSpacing: {
         widest2: "0.35em",
-      },
-      backgroundImage: {
-        "gold-line": "linear-gradient(90deg, transparent, #C6A15B, transparent)",
       },
       boxShadow: {
         soft: "0 20px 60px -20px rgba(58, 51, 39, 0.25)",

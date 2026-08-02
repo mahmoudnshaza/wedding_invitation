@@ -7,8 +7,43 @@ html {
 }
 
 body {
-  background-color: #FBF7F0;
+  background-color: #FBF3E6;
   color: #3A3327;
+}
+
+/* Section pattern textures — every section carries its own quiet motif
+   (3-8% opacity) instead of one repeated background, so the page feels
+   hand-finished without ever reading as busy. Backgrounds themselves stay
+   flat, solid Tailwind colors (champagne / blush / sand-mist) — no
+   gradients anywhere. Gold and chocolate are used only as faint linework. */
+.pattern-floral {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAiIGhlaWdodD0iMTEwIiB2aWV3Qm94PSIwIDAgMTEwIDExMCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTUsNjApIiBmaWxsPSJub25lIiBzdHJva2U9IiM2QjQzMjgiIHN0cm9rZS13aWR0aD0iMC42IiBzdHJva2Utb3BhY2l0eT0iMC4wNiI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMCkiPjxwYXRoIGQ9Ik0wLDAgQy02LC05IC02LC0yMiAwLC0yOCBDNiwtMjIgNiwtOSAwLDAgWiIvPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSg3MikiPjxwYXRoIGQ9Ik0wLDAgQy02LC05IC02LC0yMiAwLC0yOCBDNiwtMjIgNiwtOSAwLDAgWiIvPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIj48cGF0aCBkPSJNMCwwIEMtNiwtOSAtNiwtMjIgMCwtMjggQzYsLTIyIDYsLTkgMCwwIFoiLz48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMjE2KSI+PHBhdGggZD0iTTAsMCBDLTYsLTkgLTYsLTIyIDAsLTI4IEM2LC0yMiA2LC05IDAsMCBaIi8+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDI4OCkiPjxwYXRoIGQ9Ik0wLDAgQy02LC05IC02LC0yMiAwLC0yOCBDNiwtMjIgNiwtOSAwLDAgWiIvPjwvZz48Y2lyY2xlIHI9IjQiIHN0cm9rZS1vcGFjaXR5PSIwLjA4Ii8+PC9nPjwvc3ZnPg==");
+  background-size: 110px 110px;
+}
+
+.pattern-scallop {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDYwIDMwIj48cGF0aCBkPSJNMCwxNSBRNy41LDIgMTUsMTUgUTIyLjUsMjggMzAsMTUgUTM3LjUsMiA0NSwxNSBRNTIuNSwyOCA2MCwxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNkI0MzI4IiBzdHJva2Utd2lkdGg9IjAuNiIgc3Ryb2tlLW9wYWNpdHk9IjAuMDYiLz48L3N2Zz4=");
+  background-size: 60px 30px;
+}
+
+.pattern-diamond {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgdmlld0JveD0iMCAwIDcwIDcwIj48cmVjdCB4PSIyOCIgeT0iMjgiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMzQgMzQpIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMC42IiBzdHJva2Utb3BhY2l0eT0iMC4wNyIvPjwvc3ZnPg==");
+  background-size: 70px 70px;
+}
+
+.pattern-dots {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxLjMiIGZpbGw9IiNDNkExNUIiIGZpbGwtb3BhY2l0eT0iMC4wOCIvPjwvc3ZnPg==");
+  background-size: 40px 40px;
+}
+
+.pattern-herringbone {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDQwIDIwIj48cGF0aCBkPSJNMCwyMCBMMTAsMiBMMjAsMjAgTDMwLDIgTDQwLDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiM2QjQzMjgiIHN0cm9rZS13aWR0aD0iMC42IiBzdHJva2Utb3BhY2l0eT0iMC4wNiIvPjwvc3ZnPg==");
+  background-size: 40px 20px;
+}
+
+.pattern-arcs {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M2QTE1QiIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjA2Ii8+PGNpcmNsZSBjeD0iODAiIGN5PSI4MCIgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M2QTE1QiIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjA2Ii8+PGNpcmNsZSBjeD0iODAiIGN5PSIwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiLz48Y2lyY2xlIGN4PSIwIiBjeT0iODAiIHI9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==");
+  background-size: 80px 80px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -34,7 +69,7 @@ button:focus-visible {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #FBF7F0;
+  background: #FBF3E6;
 }
 ::-webkit-scrollbar-thumb {
   background: #E4CE9C;

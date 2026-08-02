@@ -120,6 +120,44 @@ export function FloatingHeart({
   );
 }
 
+/**
+ * A slim corner flourish — an L-shaped bracket with a small curling
+ * tendril, echoing the hand-drawn linework used elsewhere on the site.
+ * Rotated per-corner to frame the page in PageFrame.
+ */
+export function CornerOrnament({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      width="34"
+      height="34"
+      viewBox="0 0 34 34"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 26 V4 C1 2.3 2.3 1 4 1 H26"
+        stroke="#C6A15B"
+        strokeWidth="1"
+        opacity="0.5"
+      />
+      <path
+        d="M1 13 C6 13 9 10 9 5"
+        stroke="#C6A15B"
+        strokeWidth="0.75"
+        opacity="0.3"
+      />
+      <path
+        d="M13 1 C13 6 10 9 5 9"
+        stroke="#C6A15B"
+        strokeWidth="0.75"
+        opacity="0.3"
+      />
+      <circle cx="1" cy="1" r="2" fill="#C6A15B" opacity="0.55" />
+    </svg>
+  );
+}
+
 /** A soft radial glow used behind key focal elements. */
 export function GoldGlow({ className = "" }: { className?: string }) {
   return (

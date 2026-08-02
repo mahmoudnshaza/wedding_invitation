@@ -43,7 +43,7 @@ public/
 
 ## Design notes
 
-- Palette: ivory `#FBF7F0`, cream `#F5EEE1`, soft beige `#EEE3CF`, gold `#C6A15B` (with light/soft/deep/dark shades), warm charcoal `#3A3327` for text.
+- Palette: champagne `#F3E6D3`, cream `#F5EEE1`, soft beige `#EEE3CF`, gold `#C6A15B` (with light/soft/deep/dark shades), warm charcoal `#3A3327` for text.
 - Display type: Cormorant Garamond. Body type: Poppins.
 - The signature motif is a slim, hand-drawn pair of interlocking gold rings, echoed as a divider flourish and a floating heart throughout the page — used once prominently in the hero, then quietly repeated.
 - Motion respects `prefers-reduced-motion`.

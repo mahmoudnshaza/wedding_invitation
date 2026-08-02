@@ -7,7 +7,7 @@ export default function InvitationMessage() {
   return (
     <section
       id="message"
-      className="relative w-full bg-ivory py-24 sm:py-32 px-6"
+      className="relative w-full bg-champagne pattern-scallop py-24 sm:py-32 px-6"
     >
       <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
         <motion.h2

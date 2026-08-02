@@ -35,14 +35,14 @@ const zoomIn = {
 
 function Portrait({ src, alt }: { src: string; alt: string }) {
   return (
-    <motion.div variants={zoomIn} className="relative">
-      <div className="absolute -inset-2 rounded-full border border-gold/40" />
-      <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-2 ring-gold/70 shadow-gold">
+    <motion.div variants={zoomIn} className="relative shrink-0">
+      <div className="absolute -inset-1.5 sm:-inset-2 rounded-full border border-gold/40" />
+      <div className="relative w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden ring-2 ring-gold/70 shadow-gold">
         <Image
           src={src}
           alt={alt}
           fill
-          sizes="(max-width: 768px) 144px, 176px"
+          sizes="(max-width: 640px) 80px, (max-width: 768px) 128px, (max-width: 1024px) 160px, 176px"
           className="object-cover"
           priority
         />
@@ -55,7 +55,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-ivory px-6 py-24"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-champagne pattern-floral px-6 py-24"
     >
       {/* Decorative background */}
       <GoldGlow className="w-[520px] h-[520px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -81,21 +81,21 @@ export default function Hero() {
 
         <motion.div
           variants={fadeUp}
-          className="mt-10 sm:mt-14 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-14"
+          className="mt-10 sm:mt-14 flex flex-row items-center justify-center gap-3 sm:gap-10 md:gap-14"
         >
-          <div className="flex flex-col items-center gap-5">
-            <span className="font-display italic text-4xl sm:text-5xl md:text-6xl text-charcoal">
+          <div className="flex flex-col items-center gap-3 sm:gap-5 min-w-0">
+            <span className="font-display italic text-xl sm:text-4xl md:text-6xl text-charcoal whitespace-nowrap">
               Mahmoud
             </span>
             <Portrait src="/groom.jpg" alt="Portrait of Mahmoud" />
           </div>
 
-          <motion.div variants={zoomIn} className="w-16 sm:w-20 md:w-24 shrink-0">
+          <motion.div variants={zoomIn} className="w-8 sm:w-16 md:w-24 shrink-0">
             <RingsIcon className="w-full h-auto" />
           </motion.div>
 
-          <div className="flex flex-col items-center gap-5">
-            <span className="font-display italic text-4xl sm:text-5xl md:text-6xl text-charcoal">
+          <div className="flex flex-col items-center gap-3 sm:gap-5 min-w-0">
+            <span className="font-display italic text-xl sm:text-4xl md:text-6xl text-charcoal whitespace-nowrap">
               Shaza
             </span>
             <Portrait src="/bride.jpg" alt="Portrait of Shaza" />
