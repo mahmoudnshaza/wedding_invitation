@@ -87,7 +87,7 @@ export default function Hero() {
             <span className="font-display italic text-xl sm:text-4xl md:text-6xl text-charcoal whitespace-nowrap">
               Mahmoud
             </span>
-            <Portrait src="/groom.jpg" alt="Portrait of Mahmoud" />
+            <Portrait src="/Mahmoud.jpeg" alt="Portrait of Mahmoud" />
           </div>
 
           <motion.div variants={zoomIn} className="w-8 sm:w-16 md:w-24 shrink-0">
@@ -98,7 +98,7 @@ export default function Hero() {
             <span className="font-display italic text-xl sm:text-4xl md:text-6xl text-charcoal whitespace-nowrap">
               Shaza
             </span>
-            <Portrait src="/bride.jpg" alt="Portrait of Shaza" />
+            <Portrait src="/Shaza1.jpg" alt="Portrait of Shaza" />
           </div>
         </motion.div>
 
