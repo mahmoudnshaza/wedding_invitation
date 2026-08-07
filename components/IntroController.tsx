@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import IntroOverlay, { type IntroPhase } from "./IntroOverlay";
-import MusicPlayer, { type MusicPlayerHandle } from "./MusicPlayer";
+import { useMusic } from "./MusicProvider";
 
 const SESSION_KEY = "wedding-intro-seen";
 const CELEBRATION_DURATION_MS = 2600;
@@ -17,7 +17,7 @@ type ControllerPhase = "checking" | IntroPhase | "done";
  */
 export default function IntroController({ children }: { children: ReactNode }) {
   const [phase, setPhase] = useState<ControllerPhase>("checking");
-  const musicRef = useRef<MusicPlayerHandle>(null);
+  const { unlockAndPlay, fadeIn } = useMusic();
   const celebrationTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -42,17 +42,19 @@ export default function IntroController({ children }: { children: ReactNode }) {
   }, []);
 
   const handleEnvelopeClick = useCallback(() => {
-    musicRef.current?.unlock();
+    // Must run synchronously inside the click gesture — this is the only
+    // thing that can legally unlock audio in the browser.
+    unlockAndPlay();
     setPhase("opening");
-  }, []);
+  }, [unlockAndPlay]);
 
   const handleEnvelopeOpened = useCallback(() => {
     setPhase("celebrating");
-    musicRef.current?.fadeIn();
+    fadeIn();
     celebrationTimer.current = setTimeout(() => {
       setPhase("exiting");
     }, CELEBRATION_DURATION_MS);
-  }, []);
+  }, [fadeIn]);
 
   const handleExitComplete = useCallback(() => {
     window.sessionStorage.setItem(SESSION_KEY, "1");
@@ -64,8 +66,6 @@ export default function IntroController({ children }: { children: ReactNode }) {
       <div aria-hidden={introActive} className={introActive ? "invisible" : undefined}>
         {children}
       </div>
-
-      {phase !== "checking" && <MusicPlayer ref={musicRef} />}
 
       {phase === "checking" && (
         <div className="fixed inset-0 z-[100] bg-champagne" aria-hidden="true" />

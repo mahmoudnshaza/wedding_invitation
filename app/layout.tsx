@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Poppins } from "next/font/google";
 import PageFrame from "@/components/PageFrame";
 import IntroController from "@/components/IntroController";
+import MusicProvider from "@/components/MusicProvider";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -34,7 +35,9 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${poppins.variable}`}>
       <body className="font-body antialiased bg-champagne text-charcoal overflow-x-hidden">
         <PageFrame />
-        <IntroController>{children}</IntroController>
+        <MusicProvider>
+          <IntroController>{children}</IntroController>
+        </MusicProvider>
       </body>
     </html>
   );
