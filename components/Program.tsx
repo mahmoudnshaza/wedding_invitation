@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Church, UtensilsCrossed, PartyPopper, type LucideIcon } from "lucide-react";
+import { Users, Church, UtensilsCrossed, PartyPopper, type LucideIcon, Landmark } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 interface ProgramItem {
@@ -12,7 +12,7 @@ interface ProgramItem {
 
 const items: ProgramItem[] = [
   { time: "7:00 PM", label: "Guest Arrival", icon: Users },
-  { time: "7:30 PM", label: "Ceremony", icon: Church },
+  { time: "7:30 PM", label: "Ceremony", icon: Landmark },
   { time: "9:00 PM", label: "Dinner", icon: UtensilsCrossed },
   { time: "12:00 AM", label: "Party Ends", icon: PartyPopper },
 ];

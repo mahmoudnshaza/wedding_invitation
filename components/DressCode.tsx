@@ -9,7 +9,7 @@ interface PaletteColor {
 }
 
 const palette: PaletteColor[] = [
-    { name: "Sand", hex: "#DAC6A6" },
+    { name: "Plum", hex: "#652134" },
     { name: "Dusty Rose", hex: "#C79392" },
     { name: "Berry", hex: "#7C2F44" },
     { name: "Chocolate", hex: "#6B4328" },
